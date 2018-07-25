@@ -11,6 +11,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var catalog = require('./routes/catalog'); 
 
+
 var app = express();
 
 //set up mongoose connection
@@ -39,7 +40,9 @@ app.use('/catalog', catalog); // Add catalog routes to middleware chain
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+	var err = new Error ('Not found');
+	err.status = 404;
+  	next(err);
 });
 
 // error handler
