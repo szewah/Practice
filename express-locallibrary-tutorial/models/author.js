@@ -41,15 +41,15 @@ AuthorSchema
 });
 
 AuthorSchema
-.virtual('date_of_birth_yyyy_mm_dd')
+.virtual('date_of_birth_dd_mm_yyy')
 .get(function () {
-  return moment(this.date_of_birth).format('D MMMM, YYYY');
+  return moment(this.date_of_birth).format('DD-MMMM-YYYY');
 });
 
 AuthorSchema
-.virtual('date_of_death_yyyy_mm_dd')
+.virtual('date_of_death_dd_mm_yyyy')
 .get(function () {
-  return moment(this.date_of_death).format('D MMMM, YYYY');
+  return moment(this.date_of_death).format('DD-MMMM-YYYY');
 });
 
 //Export model

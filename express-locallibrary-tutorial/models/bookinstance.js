@@ -19,5 +19,11 @@ BookInstanceSchema
   return moment(this.due_back).format('D MMMM, YYYY');
 });
 
+BookInstanceSchema
+.virtual('due_back_dd_mm_yyyy')
+.get(function () {
+  return moment(this.due_back).format('DD-MM-YYYY');
+});
+
 //Export model
 module.exports = mongoose.model('BookInstance', BookInstanceSchema);
