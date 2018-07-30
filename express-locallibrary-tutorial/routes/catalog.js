@@ -32,7 +32,7 @@ router.get('/book/:id/update', book_controller.book_update_get);
 // POST request to update Book.
 router.post('/book/:id/update', book_controller.book_update_post);
 
-// GET request for one Book.
+// GET request for one Book. Colon id is a variable but maintain the slashes
 router.get('/book/:id', book_controller.book_detail);
 
 // GET request for list of all Book.
