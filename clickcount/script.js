@@ -19,7 +19,10 @@ $("#clickme").click(function () {
 		$("body").css("background-color", "green")
 	} else if (count === 15) {
 		$("body").css("background-color", "blue")
+	} else if (count === 20){
+		$("body").css("background-color", "purple")
 	} else {
 		$("body").css("background-color", "black")
 	}
+	// return count = 0;
 });
